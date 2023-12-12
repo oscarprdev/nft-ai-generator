@@ -4,21 +4,58 @@
 
 :root {
 	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+	--background-rgb: 255, 255, 255;
+
+	--contrast: #f56f2c;
+	--contrast-light: #fb9a69;
+
+	--background-shadow: #e9e9e9;
+
+	--max-width-app: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
+		--background-rgb: 0, 0, 0;
+		--contrast: #18efa2;
 	}
 }
 
 body {
 	color: rgb(var(--foreground-rgb));
-	background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+	background: rgb(var(--background-rgb));
+}
+
+.hero-grid {
+	grid-template-areas:
+		'a b b c'
+		'a d e c';
+}
+
+.hero-image-1 {
+	grid-area: a;
+}
+
+.hero-image-2 {
+	grid-area: b;
+}
+
+.hero-image-3 {
+	grid-area: c;
+}
+
+.hero-image-4 {
+	grid-area: d;
+}
+
+.hero-image-5 {
+	grid-area: e;
+}
+
+.feature-card-bg {
+	background-image: url(../../public/feature-card-pattern.webp);
+	background-repeat: repeat;
 }
 
 @keyframes toast {
@@ -38,4 +75,35 @@ body {
 
 .toast-animation {
 	animation: toast ease 3s;
+}
+
+@keyframes slide-up {
+	from {
+		opacity: 0;
+		transform: translateY(5%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.slide-up-animation {
+	animation: slide-up ease 1s forwards;
+}
+
+.animation-delay-200 {
+	animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+	animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+	animation-delay: 0.6s;
+}
+
+.animation-delay-800 {
+	animation-delay: 0.8s;
 }

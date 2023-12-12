@@ -6,7 +6,6 @@ import { CLOUDFLARE_BEARER_TOKEN, CLOUDFLARE_STABLE_DIFFUSION_URL } from '@/cons
 import { redirect } from 'next/navigation';
 
 export const generateImage = async (formData: FormData) => {
-	// A happy llama running through an orange cloud
 	const promptData = { prompt: formData.get('prompt') };
 	const outputFileName = `${crypto.randomUUID().toString()}.png`;
 

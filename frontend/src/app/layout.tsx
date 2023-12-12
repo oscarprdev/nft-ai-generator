@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'NFTAI',
-	description: 'NFT AI generator',
+	title: 'Creative',
+	description: 'Image AI generator',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

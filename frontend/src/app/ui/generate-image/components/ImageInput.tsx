@@ -12,7 +12,7 @@ const ImageInput = () => {
 				name='prompt'
 				placeholder='Image description'
 				disabled={pending}
-				className='p-3 min-w-[300px] rounded-full text-zinc-500 disabled:text-zinc-400'
+				className='p-3 min-w-[300px] rounded-full text-zinc-800 disabled:text-zinc-400'
 			/>
 			<div className='h-5'>{pending && <LoadIcon className='w-8 animate-spin' />}</div>
 		</label>

@@ -1,24 +1,11 @@
-import ImageForm from './components/ImageForm';
-import ImageGenerated from './components/ImageGenerated';
-import NotificationToast from './components/NotificationToast';
+import HomeView from '@/app/ui/home/HomeView';
+import Header from './ui/common/Header';
 
-interface HomeProps {
-	searchParams: {
-		file: string;
-		success: string;
-		error: string;
-	};
-}
-
-export default function Home({ searchParams: { file, success, error } }: HomeProps) {
+export default function Home() {
 	return (
-		<main className='h-screen grid place-items-center'>
-			<NotificationToast
-				success={success}
-				error={error}
-			/>
-			{file && <ImageGenerated file={file} />}
-			<ImageForm />
+		<main className='flex flex-col items-center w-full'>
+			<Header />
+			<HomeView />
 		</main>
 	);
 }

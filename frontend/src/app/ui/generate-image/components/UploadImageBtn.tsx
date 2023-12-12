@@ -1,6 +1,6 @@
 'use client';
 
-import { uploadImage } from '../actions/upload-image';
+import { uploadImage } from '../../../actions/upload-image';
 
 interface UploadImageBtnProps {
 	file: string;

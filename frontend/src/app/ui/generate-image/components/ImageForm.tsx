@@ -1,6 +1,6 @@
 'use server';
 
-import { generateImage } from '../actions/generate-image';
+import { generateImage } from '../../../actions/generate-image';
 import ImageInput from './ImageInput';
 
 const ImageForm = async () => {
