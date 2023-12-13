@@ -7,7 +7,7 @@ import CloudIcon from '../../common/icons/CloudIcon';
 
 const Features = () => {
 	return (
-		<section className='w-full flex flex-col items-center gap-16 py-5 px-12 h-screen'>
+		<section className='w-full flex flex-col items-center gap-16 px-12 py-5'>
 			<p className='z-10 intersection-animation text-4xl font-bold text-center'>
 				Our cutting-edge features <br /> revolutionizing AI experience
 			</p>
