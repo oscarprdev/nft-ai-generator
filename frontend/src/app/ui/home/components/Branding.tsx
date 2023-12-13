@@ -3,7 +3,7 @@ import ImageItem from '../../common/ImageItem';
 
 const Branding = () => {
 	return (
-		<section className='flex items-center justify-between w-full h-[20vh] px-12 mb-10'>
+		<section className='intersection-animation flex items-center justify-between w-full h-[20vh] px-12 mb-10'>
 			<p className='w-[50%] text-xl'>
 				Powered by innovation and driven by a passion for progress, <span className='text-[var(--contrast)] font-bold'>Creative.ai</span> is
 				supported by a team of dedicated experts

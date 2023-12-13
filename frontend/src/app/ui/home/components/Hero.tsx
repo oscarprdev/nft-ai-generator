@@ -5,7 +5,7 @@ const Hero = () => {
 		<section className='flex flex-col items-center w-full gap-5 h-screen'>
 			<div className='flex flex-col items-center gap-5'>
 				<h1 className='text-6xl text-center font-bold'>
-					Generate your ideas into <br /> stunning <span className='italic text-[var(--contrast)]'>nft</span> visuals
+					Generate your ideas into <br /> stunning <span className='italic text-[var(--contrast)]'>NFT</span> visuals
 				</h1>
 			</div>
 			<div className='grid place-items-center hero-grid h-[70vh] gap-5'>
@@ -45,7 +45,7 @@ const Hero = () => {
 					cover
 				/>
 			</div>
-			<p className='text-zinc-400 text-lg'>Art created by AI</p>
+			<p className='text-zinc-400 text-lg'>NFT Art created by AI</p>
 		</section>
 	);
 };

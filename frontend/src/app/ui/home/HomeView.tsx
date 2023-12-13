@@ -9,6 +9,7 @@ const HomeView = () => {
 			<Hero />
 			<Branding />
 			<Features />
+			<Branding />
 		</section>
 	);
 };

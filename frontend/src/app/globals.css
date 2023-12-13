@@ -7,7 +7,20 @@
 	--background-rgb: 255, 255, 255;
 
 	--contrast: #f56f2c;
-	--contrast-light: #fb9a69;
+	--contrast-light: #ffaf87;
+	--contrast-max-light: #ffe1d2;
+
+	--card-gray: #59595e;
+	--card-gray-light: #adadaf;
+
+	--card-blue: #420cda;
+	--card-blue-light: #6b6bf8;
+
+	--card-yellow: #cad34f;
+	--card-yellow-light: #d5db7f;
+
+	--card-green: #4ccf48;
+	--card-green-light: #9cd49a;
 
 	--background-shadow: #e9e9e9;
 
@@ -19,6 +32,10 @@
 		--foreground-rgb: 255, 255, 255;
 		--background-rgb: 0, 0, 0;
 		--contrast: #18efa2;
+		--contrast-light: #6efcca;
+		--contrast-max-light: #bfffe9;
+
+		--card-gray: #59595e;
 	}
 }
 
@@ -106,4 +123,26 @@ body {
 
 .animation-delay-800 {
 	animation-delay: 0.8s;
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		transform: translateY(55%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.intersection-animation {
+	view-timeline-name: --show;
+	view-timeline-axis: block;
+
+	animation-timeline: --show;
+	animation-name: show;
+	animation-range: entry 20% cover 60%;
+	animation-fill-mode: both;
 }

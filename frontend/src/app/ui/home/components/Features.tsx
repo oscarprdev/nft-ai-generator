@@ -2,36 +2,68 @@ import React from 'react';
 import ThunderIcon from '../../common/icons/ThunderIcon';
 import TextIcon from '../../common/icons/TextIcon';
 import ImageIcon from '../../common/icons/ImageIcon';
+import EtherIcon from '../../common/icons/EtherIcon';
+import CloudIcon from '../../common/icons/CloudIcon';
 
 const Features = () => {
 	return (
-		<section className='w-full flex flex-col items-center gap-10 py-5 px-12 h-screen'>
-			<p className='text-4xl font-bold text-center'>
+		<section className='w-full flex flex-col items-center gap-16 py-5 px-12 h-screen'>
+			<p className='z-10 intersection-animation text-4xl font-bold text-center'>
 				Our cutting-edge features <br /> revolutionizing AI experience
 			</p>
-			<div className='w-full flex flex-col'>
+			<div className='w-full flex flex-col gap-8 intersection-animation'>
 				<div className='flex items-center gap-8'>
-					<article className='feature-card-bg flex flex-col items-start gap-5 p-12 border border-black rounded-xl bg-gradient-to-tl from-[var(--background-shadow)] to-[var(--background-rgb)]'>
-						<span className='p-2 rounded-xl bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]'>
-							<ThunderIcon className='w-8 fill-white' />
-						</span>
-						<p className='text-3xl w-[85%]'>Lighting Fast. Just start with an idea and see how fast it evolves</p>
-					</article>
-					<article className='feature-card-bg flex flex-col items-start gap-5 p-12 border border-black rounded-xl'>
-						<div className='flex items-center gap-1'>
-							<span className='p-2 rounded-xl bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]'>
-								<TextIcon className='w-8 text-white fill-none' />
-							</span>
+					<article className='shadow-xl grid place-items-center rounded-xl border border-[var(--card-blue)] p-2 w-[50%] bg-gradient-to-tl from-[var(--card-blue)] to-[var(--card-blue-light)]'>
+						<div className='relative overflow-hidden flex flex-col items-center p-5 gap-5'>
 							<div className='flex items-center gap-1'>
-								<span className='bg-[var(--contrast)] w-3 h-[0.1rem]' />
-								<span className='bg-[var(--contrast)] w-3 h-[0.1rem]' />
+								<span className='p-2 rounded-xl border-[2px] border-white'>
+									<TextIcon className='w-8 text-white fill-none' />
+								</span>
+								<div className='flex items-center gap-1'>
+									<span className='bg-white w-3 h-[0.1rem]' />
+									<span className='bg-white w-3 h-[0.1rem]' />
+								</div>
+								<span className='p-2 rounded-xl border-[2px] border-white'>
+									<ImageIcon className='w-8 text-white' />
+								</span>
 							</div>
-							<span className='p-2 rounded-xl bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]'>
-								<ImageIcon className='w-8 text-white' />
-							</span>
+							<p className='text-xl w-[85%] z-10 text-white'>Text to image. Imagine, ask, create, describe and generate</p>
 						</div>
-
-						<p className='text-3xl w-[85%]'>Text to image. Imagine, ask, create, describe and generate</p>
+					</article>
+					<article className='shadow-xl grid place-items-center rounded-xl border border-[var(--card-gray)] p-2 w-[50%] bg-gradient-to-tl from-[var(--card-gray)] to-[var(--card-gray-light)]'>
+						<div className='relative overflow-hidden flex flex-col items-center p-5 rounded-xl gap-5'>
+							<div className='flex items-center gap-1'>
+								<span className='p-2 rounded-xl border-[2px] border-white'>
+									<ImageIcon className='w-8 text-white' />
+								</span>
+								<div className='flex items-center gap-1'>
+									<span className='bg-white w-3 h-[0.1rem]' />
+									<span className='bg-white w-3 h-[0.1rem]' />
+								</div>
+								<span className='p-2 rounded-xl border-[2px] border-white'>
+									<EtherIcon className='w-8 text-white' />
+								</span>
+							</div>
+							<p className='text-xl w-[85%] z-10 text-white'>AI generated art to NFT in a simple and enjoyable way</p>
+						</div>
+					</article>
+				</div>
+				<div className='flex items-center gap-8'>
+					<article className='shadow-xl grid place-items-center border border-[var(--card-green)] rounded-xl p-2 w-[50%] bg-gradient-to-tl from-[var(--card-green)] to-[var(--card-green-light)]'>
+						<div className='relative overflow-hidden flex flex-col items-center p-5 rounded-xl gap-5'>
+							<span className='p-2 rounded-xl border-[2px] border-white'>
+								<ThunderIcon className='w-8 fill-zinc-100' />
+							</span>
+							<p className='text-xl w-[85%] z-10 text-zinc-100'>Lighting fast. Just start with an idea and see how fast it evolves</p>
+						</div>
+					</article>
+					<article className='shadow-xl grid place-items-center border border-[var(--contrast)] rounded-xl p-2 w-[50%] bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]'>
+						<div className='relative overflow-hidden flex flex-col items-center p-5 rounded-xl gap-5'>
+							<span className='z-10 p-2 rounded-xl border-[2px] border-white'>
+								<CloudIcon className='w-8 text-white' />
+							</span>
+							<p className='text-xl w-[85%] z-10 text-white'>Edge to cloud makes your AI art seamless and dynamic</p>
+						</div>
 					</article>
 				</div>
 			</div>

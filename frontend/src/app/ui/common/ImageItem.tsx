@@ -10,7 +10,7 @@ interface ImageProps {
 
 const ImageItem = ({ className, src, alt, rounded, cover }: ImageProps) => {
 	return (
-		<figure className={`${className} ${rounded && 'rounded-xl'} h-full w-full overflow-hidden`}>
+		<figure className={`${className} ${rounded && 'rounded-xl'} shadow-md h-full w-full overflow-hidden`}>
 			<Image
 				src={src}
 				alt={alt}
