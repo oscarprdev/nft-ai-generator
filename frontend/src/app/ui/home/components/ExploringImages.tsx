@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageItem from '../../common/ImageItem';
 import SelectImages from './SelectImages';
 import Button from '../../common/Button';

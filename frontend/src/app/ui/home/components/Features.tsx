@@ -1,4 +1,3 @@
-import React from 'react';
 import ThunderIcon from '../../common/icons/ThunderIcon';
 import TextIcon from '../../common/icons/TextIcon';
 import ImageIcon from '../../common/icons/ImageIcon';

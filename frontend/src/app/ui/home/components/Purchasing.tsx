@@ -1,5 +1,3 @@
-import React from 'react';
-import Button from '../../common/Button';
 import PurchasingCard, { PlanKinds } from './PurchasingCard';
 
 const Purchasing = () => {
@@ -10,7 +8,7 @@ const Purchasing = () => {
 				<p className='text-md'>Choose the plan that works better for you</p>
 			</div>
 			<div className='flex items-center justify-center gap-5 w-full h-full mt-10'>
-				<PurchasingCard plan={PlanKinds.basic} />
+				<PurchasingCard plan={PlanKinds.free} />
 				<PurchasingCard plan={PlanKinds.standard} />
 				<PurchasingCard plan={PlanKinds.pro} />
 			</div>
