@@ -44,7 +44,7 @@ const ExploringImages = () => {
 					prompt='Cat dressed in the costume of "the punisher"'
 				/>
 			</div>
-			<div className='flex items-center justify-between w-full mt-5 gap-5'>
+			<div className='small-intersection-animation flex items-center justify-between w-full mt-5 gap-5'>
 				<p className=''>
 					We take a pride in the work created on our platform. Showcase the top daily <br />
 					generative image for your discover

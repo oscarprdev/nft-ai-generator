@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Branding from './components/Branding';
 import Features from './components/Features';
 import ExploringImages from './components/ExploringImages';
+import Purchasing from './components/Purchasing';
 
 const HomeView = () => {
 	return (
@@ -11,6 +12,7 @@ const HomeView = () => {
 			<Branding />
 			<Features />
 			<ExploringImages />
+			<Purchasing />
 			<Branding />
 		</section>
 	);
