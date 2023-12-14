@@ -147,6 +147,16 @@ body {
 	animation-fill-mode: both;
 }
 
+.small-intersection-animation {
+	view-timeline-name: --show;
+	view-timeline-axis: block;
+
+	animation-timeline: --show;
+	animation-name: show;
+	animation-range: entry 5% cover 40%;
+	animation-fill-mode: both;
+}
+
 .exploring-grid {
 	grid-template-areas:
 		'a b c'

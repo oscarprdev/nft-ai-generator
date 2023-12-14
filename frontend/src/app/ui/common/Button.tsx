@@ -11,9 +11,11 @@ const Button = ({ content, primary, secondary, onClick }: ButtonProps) => {
 	return (
 		<button
 			className={`py-2 px-5 rounded-full border-2 ${
-				primary && 'bg-transparent border-[var(--contrast)] text-[var(--contrast)] hover:bg-[var(--contrast)] hover:text-white'
+				primary &&
+				'bg-transparent border-[var(--contrast)] text-[var(--contrast)] hover:bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]  hover:text-white'
 			} ${
-				secondary && 'bg-[var(--contrast)] border-[var(--contrast)] text-white hover:bg-transparent hover:text-[var(--contrast)]'
+				secondary &&
+				'bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)] border-[var(--contrast-light)] text-white hover:bg-gradient-to-tl hover:from-transparent hover:to-transparent hover:text-[var(--contrast)] hover:border-[var(--contrast)]'
 			} transition-all linear duration-300`}
 			onClick={onClick}>
 			{content}
