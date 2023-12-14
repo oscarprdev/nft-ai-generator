@@ -183,3 +183,18 @@ body {
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(5px);
 }
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		display: none;
+	}
+	to {
+		opacity: 1;
+		display: block;
+	}
+}
+
+.fade-in-animation {
+	animation: fade-in ease 1s forwards;
+}

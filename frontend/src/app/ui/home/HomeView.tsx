@@ -4,6 +4,7 @@ import Branding from './components/Branding';
 import Features from './components/Features';
 import ExploringImages from './components/ExploringImages';
 import Purchasing from './components/Purchasing';
+import Questions from './components/Questions';
 
 const HomeView = () => {
 	return (
@@ -13,6 +14,7 @@ const HomeView = () => {
 			<Features />
 			<ExploringImages />
 			<Purchasing />
+			<Questions />
 			<Branding />
 		</section>
 	);

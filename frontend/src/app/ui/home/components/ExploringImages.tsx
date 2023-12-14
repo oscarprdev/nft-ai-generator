@@ -4,7 +4,7 @@ import Button from '../../common/Button';
 
 const ExploringImages = () => {
 	return (
-		<section className='w-full flex flex-col items-center px-12 py-5 mt-20 h-screen'>
+		<section className='w-full flex flex-col items-center px-12 py-5 mt-20'>
 			<p className='z-10 small-intersection-animation text-4xl font-bold text-center'>
 				Explore the best generative <br /> NFT images
 			</p>

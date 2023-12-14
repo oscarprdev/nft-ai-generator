@@ -2,7 +2,7 @@ import ImageItem from '../../common/ImageItem';
 
 const Hero = () => {
 	return (
-		<section className='flex flex-col items-center w-full gap-5 h-screen'>
+		<section className='flex flex-col items-center w-full gap-5'>
 			<div className='flex flex-col items-center gap-5'>
 				<h1 className='text-6xl text-center font-bold'>
 					Generate your ideas into <br /> stunning <span className='italic text-[var(--contrast)]'>NFT</span> visuals
