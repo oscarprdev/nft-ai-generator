@@ -1,7 +1,7 @@
 import { QuestionsInfo } from './types';
 
 export const questionsInfo: QuestionsInfo = {
-	title: 'Couldn`t find what you were lookin for?',
+	title: 'Couldn`t find what you were looking for?',
 	email: 'faq@creativeai.com',
 	questions: [
 		{
@@ -17,6 +17,10 @@ export const questionsInfo: QuestionsInfo = {
 			question: 'Can I create AI art with free plan?',
 			answer:
 				'For sure, it is possible to just play around with the generative AI art for free. Better quality and NFTs feature needs at least the standard plan.',
+		},
+		{
+			question: 'Need I a credit card to start?',
+			answer: 'No, you only need credit card for subscribing to standard or pro plan.',
 		},
 	],
 };
