@@ -7,7 +7,7 @@ const Questions = async () => {
 	const questionsInfo: QuestionsInfo = await questionsApiResponse.json();
 
 	return (
-		<section className='flex justify-between items-start w-full gap-5 mt-36 px-12 h-[45vh]'>
+		<section className='flex justify-between items-start w-full gap-5 mt-36 pt-12 h-[45vh]'>
 			<div className='small-intersection-animation flex flex-col items-start justify-between gap-5'>
 				<h3 className='text-4xl font-bold'>Frequently asked questions</h3>
 				<div className='flex flex-col'>

@@ -1,5 +1,4 @@
 import { APP_API_URL } from '@/constants';
-import React from 'react';
 import MarqueeRow from './MarqueeRow';
 
 const HomeGallery = async () => {

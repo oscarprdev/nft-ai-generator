@@ -14,7 +14,7 @@ const MarqueeRow = ({ images, second }: MarqueeRowProps) => {
 						key={crypto.randomUUID().toString()}
 						src={img}
 						alt='gallery image'
-						className={`w-full h-full ml-5 odd:mt-24 border-[0.3rem] opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:border-[var(--contrast)] duration-500`}
+						className={`ml-5 odd:mt-24 border-[0.3rem] opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:border-[var(--contrast)] duration-500`}
 						cover
 						rounded
 					/>
@@ -27,7 +27,7 @@ const MarqueeRow = ({ images, second }: MarqueeRowProps) => {
 						key={crypto.randomUUID().toString()}
 						src={img}
 						alt='gallery image'
-						className={`w-full h-full ml-5 odd:mt-24 border-[0.3rem] opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:border-[var(--contrast)] duration-500`}
+						className={`ml-5 odd:mt-24 border-[0.3rem] opacity-60 grayscale hover:grayscale-0 hover:opacity-100 hover:border-[var(--contrast)] duration-500`}
 						cover
 						rounded
 					/>

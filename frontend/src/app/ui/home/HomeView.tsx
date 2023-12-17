@@ -23,7 +23,6 @@ const HomeView = async ({ top }: HomeViewProps) => {
 			<Questions />
 			<ActionCard />
 			<HomeGallery />
-			<Branding />
 		</section>
 	);
 };

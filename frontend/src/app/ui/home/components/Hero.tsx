@@ -39,7 +39,7 @@ const Hero = async () => {
 					/>
 				))}
 			</div>
-			<p className='text-zinc-400 text-lg'>NFT Art created by AI</p>
+			<p className='text-zinc-400 text-lg'>Art created by AI</p>
 		</section>
 	);
 };
