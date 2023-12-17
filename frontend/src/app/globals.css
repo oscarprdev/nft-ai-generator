@@ -70,11 +70,6 @@ body {
 	grid-area: e;
 }
 
-.feature-card-bg {
-	background-image: url(../../public/feature-card-pattern.webp);
-	background-repeat: repeat;
-}
-
 @keyframes toast {
 	0% {
 		transform: translateY(0%);

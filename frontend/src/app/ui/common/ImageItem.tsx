@@ -11,7 +11,7 @@ interface ImageProps {
 
 const ImageItem = ({ className, src, alt, rounded, cover, prompt }: ImageProps) => {
 	return (
-		<figure className={`${className} ${rounded && 'rounded-xl'} relative shadow-md h-full w-full overflow-hidden`}>
+		<figure className={`${className} ${rounded && 'rounded-xl'} relative h-full w-full overflow-hidden`}>
 			<Image
 				src={src}
 				alt={alt}

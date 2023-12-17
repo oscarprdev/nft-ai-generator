@@ -8,3 +8,4 @@ export const S3_API_URL = process.env.S3_API_URL || '';
 export const PUBLIC_R2_URL = process.env.PUBLIC_R2_URL || '';
 export const S3_ACCESS_KEY_ID = process.env.S3_ACCESS_KEY_ID || '';
 export const S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY || '';
+export const APP_API_URL = process.env.APP_API_URL || '';
