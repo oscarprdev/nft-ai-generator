@@ -34,18 +34,17 @@ const ExploringImages = async ({ top }: ExploringImagesProps) => {
 			</p>
 			<div className='relative grid place-items-center exploring-grid w-full h-[70vh] gap-5 mt-16'>
 				<SelectImages />
-				{exploringInfo &&
-					exploringInfo.map((info, i) => (
-						<ImageItem
-							key={crypto.randomUUID().toString()}
-							className={`small-intersection-animation exploring-image-${i + 1} opacity-0 slide-up-animation ${cardDelay(i + 1)}`}
-							src={info.image}
-							alt={info.alt}
-							rounded
-							cover
-							prompt={info.prompt}
-						/>
-					))}
+				{exploringInfo.map((info, i) => (
+					<ImageItem
+						key={crypto.randomUUID().toString()}
+						className={`small-intersection-animation exploring-image-${i + 1} opacity-0 slide-up-animation ${cardDelay(i + 1)}`}
+						src={info.image}
+						alt={info.alt}
+						rounded
+						cover
+						prompt={info.prompt}
+					/>
+				))}
 			</div>
 			<div className='small-intersection-animation flex items-center justify-between w-full mt-5 gap-5'>
 				<p className=''>

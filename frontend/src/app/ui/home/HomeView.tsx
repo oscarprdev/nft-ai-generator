@@ -6,6 +6,7 @@ import ExploringImages from './components/ExploringImages';
 import Purchasing from './components/Purchasing';
 import Questions from './components/Questions';
 import ActionCard from './components/ActionCard';
+import HomeGallery from './components/HomeGallery';
 
 interface HomeViewProps {
 	top?: string;
@@ -21,6 +22,7 @@ const HomeView = async ({ top }: HomeViewProps) => {
 			<Purchasing />
 			<Questions />
 			<ActionCard />
+			<HomeGallery />
 			<Branding />
 		</section>
 	);
