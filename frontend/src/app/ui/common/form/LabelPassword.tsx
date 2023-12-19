@@ -42,9 +42,9 @@ const LabelPassword = () => {
 					onClick={togglePasswordVisibility}
 					className='cursor-pointer absolute top-[0.6rem] right-2 group'>
 					{passwordVisible ? (
-						<EyeClosedIcon className=' w-8 text-zinc-400 group-hover:text-zinc-600 transition-colors delay-100' />
+						<EyeClosedIcon className=' w-8 text-zinc-400 group-hover:text-zinc-600 transition-colors duration-300' />
 					) : (
-						<EyeIcon className='w-8 text-zinc-400 group-hover:text-zinc-600 transition-colors delay-100' />
+						<EyeIcon className='w-8 text-zinc-400 group-hover:text-zinc-600 transition-colors duration-300' />
 					)}
 				</div>
 			</div>
