@@ -1,10 +1,10 @@
 'use client';
 
-import { registerAction } from '@/app/home/actions/register-action';
 import { useFormState } from 'react-dom';
 import FormInput from '../../form/FormInput';
 import FormButton from '../../form/FormButton';
 import LabelPassword from '../../form/LabelPassword';
+import { registerAction } from '@/app/home/actions/register-action';
 
 const RegisterForm = () => {
 	const [state, formAction] = useFormState(registerAction, { message: '' });
