@@ -1,20 +1,19 @@
-import LoaderIcon from './icons/LoaderIcon';
+import Link from 'next/link';
 
-interface ButtonProps {
+interface ButtonLinkProps {
+	href: string;
 	content: string;
 	primary?: boolean;
 	secondary?: boolean;
 	tertiary?: boolean;
-	disabled?: boolean;
-	pending?: boolean;
-	onClick?: () => void;
 }
 
-const Button = ({ content, primary, secondary, tertiary, disabled, pending, onClick }: ButtonProps) => {
+const ButtonLink = ({ href, content, primary, secondary, tertiary }: ButtonLinkProps) => {
 	return (
-		<button
-			disabled={disabled}
-			className={`z-10 w-full py-2 px-5 rounded-full border-2 ${
+		<Link
+			href={href}
+			scroll={false}
+			className={`z-10 py-2 px-5 rounded-full border-2 ${
 				primary &&
 				'bg-transparent border-[var(--contrast)] text-[var(--contrast)] hover:bg-gradient-to-tl from-[var(--contrast)] to-[var(--contrast-light)]  hover:text-white'
 			} ${
@@ -24,21 +23,10 @@ const Button = ({ content, primary, secondary, tertiary, disabled, pending, onCl
 				tertiary &&
 				'bg-gradient-to-tl hover:from-[var(--card-gray)] hover:to-[var(--card-gray-light)]  hover:border-[var(--card-gray-light)] hover:text-white hover:bg-gradient-to-tl from-transparent to-transparent text-[var(--card-gray)] border-[var(--card-gray)]'
 			}
-			${
-				disabled &&
-				'bg-gradient-to-tl from-zinc-200 to-transparent text-zinc-400 border-zinc-200 hover:from-zinc-200 hover:to-transparent hover:text-zinc-400 hover:border-zinc-200'
-			}
-			transition-all linear duration-300`}
-			onClick={onClick}>
-			{pending ? (
-				<div className='grid place-items-center animate-spin'>
-					<LoaderIcon className='w-5' />
-				</div>
-			) : (
-				content
-			)}
-		</button>
+			transition-all linear duration-300`}>
+			{content}
+		</Link>
 	);
 };
 
-export default Button;
+export default ButtonLink;

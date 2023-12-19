@@ -3,6 +3,7 @@ import SelectImages from './SelectImages';
 import Button from '../../common/Button';
 import { APP_API_URL } from '@/constants';
 import { TopImagesInfo, TopImagesItem } from '@/app/api/home/exploring-images/[top]/types';
+import ButtonLink from '../../common/ButtonLink';
 
 interface ExploringImagesProps {
 	top?: string;
@@ -51,10 +52,13 @@ const ExploringImages = async ({ top }: ExploringImagesProps) => {
 					We take a pride in the work created on our platform. Showcase the top daily <br />
 					generative image for your discover
 				</p>
-				<Button
-					secondary
-					content='Start for free'
-				/>
+				<div className=''>
+					<ButtonLink
+						href='/?modal=signup'
+						secondary
+						content='Start exploring AI art'
+					/>
+				</div>
 			</div>
 		</section>
 	);

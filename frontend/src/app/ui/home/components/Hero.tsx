@@ -27,7 +27,7 @@ const Hero = async () => {
 					Generate your ideas into <br /> stunning <span className='italic text-[var(--contrast)]'>NFT</span> visuals
 				</h1>
 			</div>
-			<div className='grid place-items-center hero-grid h-[70vh] gap-5'>
+			<div className='grid place-items-center hero-grid w-full h-[70vh] gap-5'>
 				{heroImages.map((img, i) => (
 					<ImageItem
 						key={crypto.randomUUID().toString()}

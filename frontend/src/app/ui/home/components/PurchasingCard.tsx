@@ -62,7 +62,7 @@ const PurchasingCard = async ({ plan }: PurchasingCardProps) => {
 					<p className='text-sm'>{purchasingInfo.sell?.text}</p>
 				</li>
 			</ul>
-			<div className='flex justify-center w-full'>
+			<div className='flex justify-center w-50'>
 				<Button
 					secondary
 					content={`Subscribe ${plan} plan`}
