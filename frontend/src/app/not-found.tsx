@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ButtonLink from './ui/common/ButtonLink';
+import ButtonLink from './components/ButtonLink';
 
 export default function NotFound() {
 	return (
@@ -11,7 +11,7 @@ export default function NotFound() {
 					<ButtonLink
 						primary
 						content='Home'
-						href='/'
+						href='/home'
 					/>
 				</div>
 			</div>

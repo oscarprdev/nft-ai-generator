@@ -1,5 +1,5 @@
 import { APP_API_URL } from '@/constants';
-import ImageItem from '../../common/ImageItem';
+import ImageItem from '../../components/ImageItem';
 import { BrandingInfo } from '@/app/api/home/branding/types';
 
 const Branding = async () => {

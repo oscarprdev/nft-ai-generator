@@ -1,28 +1,18 @@
 'use client';
 
-import { registerAction } from '@/app/actions/register-action/register-action';
-import { useFormState } from 'react-dom';
-import FormInput from '../../form/FormInput';
+import { loginAction } from '@/app/home/actions/login-action';
 import FormButton from '../../form/FormButton';
+import FormInput from '../../form/FormInput';
 import LabelPassword from '../../form/LabelPassword';
+import { useFormState } from 'react-dom';
 
-const RegisterForm = () => {
-	const [state, formAction] = useFormState(registerAction, { message: '' });
+const LoginForm = () => {
+	const [state, formAction] = useFormState(loginAction, { message: '' });
 
 	return (
 		<form
 			className='flex flex-col items-center gap-5 w-full'
 			action={formAction}>
-			<label className='flex flex-col items-start gap-2 w-[inherit]'>
-				Username
-				<FormInput
-					type='text'
-					placeholder='Your amazing username'
-					id='Username'
-					name='Username'
-					required
-				/>
-			</label>
 			<label className='flex flex-col items-start gap-2 w-[inherit]'>
 				Email
 				<FormInput
@@ -35,11 +25,11 @@ const RegisterForm = () => {
 			</label>
 			<LabelPassword />
 			<div className='w-[inherit] px-5'>
-				<FormButton content='Sign up' />
+				<FormButton content='Login' />
 			</div>
 			{state.message && <p className='text-sm text-red-600'>{state.message}!</p>}
 		</form>
 	);
 };
 
-export default RegisterForm;
+export default LoginForm;

@@ -11,8 +11,8 @@ const Header = () => {
 	return (
 		<header className='w-full flex justify-between px-10 py-4'>
 			<Logo />
-			{pathname !== '/' && <AppHeader pathname={pathname} />}
-			{pathname === '/' && <HomeHeader />}
+			{pathname !== '/home' && pathname !== '/' && <AppHeader pathname={pathname} />}
+			{(pathname === '/home' || pathname === '/') && <HomeHeader />}
 		</header>
 	);
 };

@@ -1,12 +1,12 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Branding from './components/Branding';
-import Features from './components/Features';
-import ExploringImages from './components/ExploringImages';
-import Purchasing from './components/Purchasing';
-import Questions from './components/Questions';
-import ActionCard from './components/ActionCard';
-import HomeGallery from './components/HomeGallery';
+import Hero from './Hero';
+import Branding from './Branding';
+import Features from './Features';
+import ExploringImages from './ExploringImages';
+import Purchasing from './Purchasing';
+import Questions from './Questions';
+import ActionCard from './ActionCard';
+import HomeGallery from './HomeGallery';
 
 interface HomeViewProps {
 	top?: string;

@@ -1,8 +1,8 @@
-import ThunderIcon from '../../common/icons/ThunderIcon';
-import TextIcon from '../../common/icons/TextIcon';
-import ImageIcon from '../../common/icons/ImageIcon';
-import EtherIcon from '../../common/icons/EtherIcon';
-import CloudIcon from '../../common/icons/CloudIcon';
+import ThunderIcon from '../../components/icons/ThunderIcon';
+import TextIcon from '../../components/icons/TextIcon';
+import ImageIcon from '../../components/icons/ImageIcon';
+import EtherIcon from '../../components/icons/EtherIcon';
+import CloudIcon from '../../components/icons/CloudIcon';
 
 const Features = () => {
 	return (

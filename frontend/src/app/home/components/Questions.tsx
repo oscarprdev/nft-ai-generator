@@ -1,5 +1,5 @@
 import { APP_API_URL } from '@/constants';
-import ArrowDownIcon from '../../common/icons/ArrowDownIcon';
+import ArrowDownIcon from '../../components/icons/ArrowDownIcon';
 import { QuestionsInfo } from '@/app/api/home/questions/types';
 
 const Questions = async () => {

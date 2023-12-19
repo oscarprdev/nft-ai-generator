@@ -1,7 +1,7 @@
 import { APP_API_URL } from '@/constants';
-import Button from '../../common/Button';
-import CheckIcon from '../../common/icons/CheckIcon';
-import XIcon from '../../common/icons/XIcon';
+import Button from '../../components/Button';
+import CheckIcon from '../../components/icons/CheckIcon';
+import XIcon from '../../components/icons/XIcon';
 import { PurchasingInfo } from '@/app/api/home/purchasing/[plan]/types';
 
 enum PlanEnum {

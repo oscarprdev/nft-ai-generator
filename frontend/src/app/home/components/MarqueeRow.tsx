@@ -1,4 +1,4 @@
-import ImageItem from '../../common/ImageItem';
+import ImageItem from '../../components/ImageItem';
 
 interface MarqueeRowProps {
 	images: string[];

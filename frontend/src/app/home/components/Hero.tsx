@@ -1,5 +1,5 @@
 import { APP_API_URL } from '@/constants';
-import ImageItem from '../../common/ImageItem';
+import ImageItem from '../../components/ImageItem';
 
 const Hero = async () => {
 	const heroApiResponse = await fetch(`${APP_API_URL}/api/home/hero`);

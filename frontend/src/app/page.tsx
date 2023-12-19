@@ -1,5 +1,4 @@
-import HomeView from '@/app/ui/home/HomeView';
-import Modal from './ui/common/Modal';
+import Home from './home/page';
 
 interface HomeProps {
 	searchParams: {
@@ -8,11 +7,6 @@ interface HomeProps {
 	};
 }
 
-export default async function Home({ searchParams }: HomeProps) {
-	return (
-		<main className='flex flex-col items-center w-full'>
-			<HomeView top={searchParams.top} />
-			<Modal modal={searchParams.modal} />
-		</main>
-	);
+export default async function Page({ searchParams }: HomeProps) {
+	return <Home searchParams={searchParams} />;
 }

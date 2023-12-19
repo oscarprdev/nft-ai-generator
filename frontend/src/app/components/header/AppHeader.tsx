@@ -14,8 +14,8 @@ const routes = [
 		text: 'craft',
 	},
 	{
-		path: '/account',
-		text: 'account',
+		path: '/profile',
+		text: 'profile',
 	},
 ];
 
