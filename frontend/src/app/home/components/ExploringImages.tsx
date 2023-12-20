@@ -1,6 +1,5 @@
 import ImageItem from '../../components/ImageItem';
 import SelectImages from './SelectImages';
-import Button from '../../components/Button';
 import { APP_API_URL } from '@/constants';
 import { TopImagesInfo, TopImagesItem } from '@/app/api/home/exploring-images/[top]/types';
 import ButtonLink from '../../components/ButtonLink';
