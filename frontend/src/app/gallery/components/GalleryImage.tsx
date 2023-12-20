@@ -1,7 +1,7 @@
-import ImageItem from '@/app/components/ImageItem';
 import HeaderImage from './HeaderImage';
 import FooterImage from './FooterImage';
 import ButtonLink from '@/app/components/ButtonLink';
+import ImageLink from '@/app/components/ImageLink';
 
 interface GalleryImageProps {
 	url: string;
@@ -12,14 +12,11 @@ interface GalleryImageProps {
 
 const GalleryImage = ({ url, prompt, userName, id }: GalleryImageProps) => {
 	return (
-		<article className='relative min-w-[250px] min-h-[380px] w-[15vw] h-[50vh] flex flex-col gap-2 cursor-pointer p-3 rounded-xl border'>
+		<article className='relative min-w-[250px] min-h-[380px] w-[15vw] h-[50vh] flex flex-col gap-2 p-3 rounded-3xl border'>
 			<HeaderImage />
-			<ImageItem
-				src={url}
-				alt='image'
-				className='w-full'
-				cover
-				rounded
+			<ImageLink
+				url={url}
+				id={id}
 				prompt={prompt}
 			/>
 			<FooterImage

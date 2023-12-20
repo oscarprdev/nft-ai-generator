@@ -1,26 +1,32 @@
-import { GalleryImagesResponse } from '@/app/api/gallery/images/types';
-import { APP_API_URL } from '@/constants';
 import GalleryImage from './GalleryImage';
+import { getImagesByFilterAction } from '../actions/get-images-by-filter.action';
 
 interface GalleryImagesProps {
 	filter?: string;
 }
 
 const GalleryImages = async ({ filter }: GalleryImagesProps) => {
-	const imagesApiResponse = await fetch(`${APP_API_URL}/api/gallery/images?filter=${filter || 'all'}`, { cache: 'no-cache' });
-	const imagesJsonResponse: GalleryImagesResponse = await imagesApiResponse.json();
+	const images = await getImagesByFilterAction(filter);
+
+	console.log(images);
 
 	return (
 		<section className='w-full flex flex-wrap items-center justify-center gap-5 p-10 max-w-[var(--max-width-app)]'>
-			{imagesJsonResponse.images.map((img) => (
-				<GalleryImage
-					key={crypto.randomUUID().toString()}
-					id={img.id}
-					url={img.url}
-					prompt={img.prompt}
-					userName={img.user_name}
-				/>
-			))}
+			{images ? (
+				images.map((img) => (
+					<GalleryImage
+						key={crypto.randomUUID().toString()}
+						id={img.id}
+						url={img.url}
+						prompt={img.prompt}
+						userName={img.user_name}
+					/>
+				))
+			) : (
+				<div className='grid place-items-center h-[35vh]'>
+					<p className='text-zinc-500'>There is no data yet!</p>
+				</div>
+			)}
 		</section>
 	);
 };

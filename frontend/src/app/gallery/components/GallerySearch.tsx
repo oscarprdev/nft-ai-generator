@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SearchInput from './SearchInput';
 
 const keywords = [
 	'all',
@@ -32,7 +33,7 @@ const GallerySearch = ({ filter }: GallerySearchProps) => {
 	const filterKeyWord = filter || 'all';
 
 	return (
-		<section className='w-full max-w-[var(--max-width-app)] grid place-items-center p-2 pb-3 border-b border-b-zinc-200'>
+		<section className='w-full max-w-[var(--max-width-app)] flex flex-col items-center gap-5 p-2 pb-5 border-b border-b-zinc-200'>
 			<ul className='flex flex-wrap items-center justify-center gap-2'>
 				{keywords.map((word) => (
 					<li
@@ -48,6 +49,7 @@ const GallerySearch = ({ filter }: GallerySearchProps) => {
 					</li>
 				))}
 			</ul>
+			<SearchInput />
 		</section>
 	);
 };
