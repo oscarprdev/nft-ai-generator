@@ -12,5 +12,5 @@ export const loginAction = async (prevState: any, formData: FormData): Promise<{
 		};
 	}
 
-	redirect('/home');
+	redirect('/gallery');
 };

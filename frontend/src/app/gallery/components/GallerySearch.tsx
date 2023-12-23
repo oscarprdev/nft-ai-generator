@@ -1,36 +1,14 @@
 import Link from 'next/link';
 import SearchInput from './SearchInput';
-
-const keywords = [
-	'all',
-	'abstract',
-	'fantasy',
-	'surreal',
-	'cyberpunk',
-	'galactic',
-	'nature',
-	'dream',
-	'futuristic',
-	'neon',
-	'steampunk',
-	'cosmic',
-	'minimalist',
-	'mythical',
-	'ethereal',
-	'urban',
-	'dystopian',
-	'whimsical',
-	'organic',
-	'vibrant',
-	'elemental',
-];
+import { getKeywordsAction } from '@/app/actions/get-keywords.action';
 
 interface GallerySearchProps {
 	filter?: string;
 }
 
-const GallerySearch = ({ filter }: GallerySearchProps) => {
+const GallerySearch = async ({ filter }: GallerySearchProps) => {
 	const filterKeyWord = filter || 'all';
+	const keywords = await getKeywordsAction();
 
 	return (
 		<section className='w-full max-w-[var(--max-width-app)] flex flex-col items-center gap-5 p-2 pb-5 border-b border-b-zinc-200'>

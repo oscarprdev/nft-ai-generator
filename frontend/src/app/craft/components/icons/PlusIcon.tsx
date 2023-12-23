@@ -1,6 +1,4 @@
-import React from 'react';
-
-const LoadIcon = ({ className }: { className?: string }) => {
+const PlusIcon = ({ className }: { className?: string }) => {
 	return (
 		<div className={className}>
 			<svg
@@ -17,10 +15,11 @@ const LoadIcon = ({ className }: { className?: string }) => {
 					d='M0 0h24v24H0z'
 					fill='none'
 				/>
-				<path d='M12 3a9 9 0 1 0 9 9' />
+				<path d='M12 5l0 14' />
+				<path d='M5 12l14 0' />
 			</svg>
 		</div>
 	);
 };
 
-export default LoadIcon;
+export default PlusIcon;

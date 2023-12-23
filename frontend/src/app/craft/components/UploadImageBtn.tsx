@@ -1,6 +1,6 @@
 'use client';
 
-import { uploadImage } from '../../../../actions/upload-image';
+import { uploadImageActions } from '../actions/upload-image.actions';
 
 interface UploadImageBtnProps {
 	file: string;
@@ -8,7 +8,7 @@ interface UploadImageBtnProps {
 
 const UploadImageBtn = ({ file }: UploadImageBtnProps) => {
 	const handleFormAction = async () => {
-		await uploadImage(file);
+		await uploadImageActions(file);
 	};
 
 	return (
