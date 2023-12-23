@@ -5,15 +5,17 @@ import ImageLink from '@/app/components/ImageLink';
 
 interface GalleryImageProps {
 	url: string;
+	title: string;
 	prompt: string;
 	userName: string;
 	id: string;
+	likes: string;
 }
 
-const GalleryImage = ({ url, prompt, userName, id }: GalleryImageProps) => {
+const GalleryImage = ({ url, title, prompt, userName, id, likes }: GalleryImageProps) => {
 	return (
 		<article className='relative min-w-[250px] min-h-[380px] w-[15vw] h-[50vh] flex flex-col gap-2 p-3 rounded-3xl border'>
-			<HeaderImage />
+			<HeaderImage likes={likes} />
 			<ImageLink
 				url={url}
 				id={id}
@@ -21,7 +23,7 @@ const GalleryImage = ({ url, prompt, userName, id }: GalleryImageProps) => {
 			/>
 			<FooterImage
 				userName={userName}
-				title={'Randome title image'}>
+				title={title}>
 				<ButtonLink
 					href={`/gallery?buy=${id}`}
 					secondary

@@ -1,5 +1,6 @@
 import GalleryImage from './GalleryImage';
 import { getImagesByFilterAction } from '../actions/get-images-by-filter.action';
+import { formatLikes } from '@/app/utils/fomatLikes';
 
 interface GalleryImagesProps {
 	filter?: string;
@@ -8,18 +9,18 @@ interface GalleryImagesProps {
 const GalleryImages = async ({ filter }: GalleryImagesProps) => {
 	const images = await getImagesByFilterAction(filter);
 
-	console.log(images);
-
 	return (
 		<section className='w-full flex flex-wrap items-center justify-center gap-5 p-10 max-w-[var(--max-width-app)]'>
-			{images ? (
+			{images && images.length > 0 ? (
 				images.map((img) => (
 					<GalleryImage
 						key={crypto.randomUUID().toString()}
 						id={img.id}
+						title={img.title}
 						url={img.url}
 						prompt={img.prompt}
 						userName={img.user_name}
+						likes={formatLikes(img.likes)}
 					/>
 				))
 			) : (
