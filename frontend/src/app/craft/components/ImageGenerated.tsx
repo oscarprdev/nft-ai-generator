@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import UploadImageBtn from './UploadImageBtn';
 import { useFormStatus } from 'react-dom';
 import ImageIcon from '../../components/icons/ImageIcon';
 import ThunderIcon from '@/app/components/icons/ThunderIcon';

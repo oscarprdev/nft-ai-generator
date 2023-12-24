@@ -1,23 +1,18 @@
 'use client';
 
 import Button from '@/app/components/Button';
-import { uploadImageActions } from '../actions/upload-image.actions';
+import { useFormStatus } from 'react-dom';
 
-interface UploadImageBtnProps {
-	file: string;
-}
-
-const UploadImageBtn = ({ file }: UploadImageBtnProps) => {
-	const handleFormAction = async () => {
-		await uploadImageActions(file);
-	};
+const UploadImageBtn = () => {
+	const { pending } = useFormStatus();
 
 	return (
 		<Button
 			secondary
 			content='Upload art'
-			onClick={handleFormAction}
-			type='button'
+			type='submit'
+			disabled={pending}
+			pending={pending}
 		/>
 	);
 };
