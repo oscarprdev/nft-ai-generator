@@ -1,5 +1,6 @@
 'use server';
 
+import { clearCookiesAction } from '@/app/actions/clear-cookies.action';
 import { UploadImageInput } from '@/app/api/craft/upload/types';
 import { Bucket } from '@/cloudflare/bucket';
 import { APP_API_URL, PUBLIC_R2_URL, S3_ACCESS_KEY_ID, S3_API_URL, S3_SECRET_ACCESS_KEY } from '@/constants';
@@ -36,6 +37,8 @@ export const uploadImageAction = async (imageName: string) => {
 			});
 
 			await result.json();
+
+			clearCookiesAction();
 		}
 	} catch (error: any) {
 		console.log(error);

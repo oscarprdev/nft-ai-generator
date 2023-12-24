@@ -1,11 +1,11 @@
 'use client';
 
 import Button from '@/app/components/Button';
-import { clearCookiesAction } from '../actions/clear-cookies.action';
+import { clearFormAction } from '../actions/clear-form.action';
 
 const ClearFormButton = () => {
 	const handleClearForm = () => {
-		clearCookiesAction();
+		clearFormAction();
 	};
 
 	return (
