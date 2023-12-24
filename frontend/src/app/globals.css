@@ -225,3 +225,30 @@ body {
 .shadow-marquee {
 	box-shadow: inset -150px -100px 100px -50px rgba(0, 0, 0, 0.8), inset 150px -100px 100px -50px rgba(0, 0, 0, 0.8);
 }
+
+.craft-title-grid {
+	grid-template-areas:
+		'a b b c'
+		'a d d c'
+		'a e e c';
+}
+
+.craft-title-left {
+	grid-area: a;
+}
+
+.craft-title-top {
+	grid-area: b;
+}
+
+.craft-title-right {
+	grid-area: c;
+}
+
+.craft-title-middle {
+	grid-area: d;
+}
+
+.craft-title-bottom {
+	grid-area: e;
+}

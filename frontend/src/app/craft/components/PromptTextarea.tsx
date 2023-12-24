@@ -19,7 +19,7 @@ const PromptTextarea = () => {
 				maxLength={100}
 				required
 				name='prompt'
-				placeholder='Put your prompt'
+				placeholder='Type your prompt'
 				className='w-full h-fit rounded-lg border bg-transparent border-zinc-300 p-3 font-light resize-none outline-none'
 			/>
 			<span className='absolute bottom-2 right-2 text-sm text-zinc-300'>{textareaValue.length}/100</span>

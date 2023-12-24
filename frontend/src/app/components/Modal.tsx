@@ -1,21 +1,27 @@
-import XIcon from './icons/XIcon';
-import Link from 'next/link';
 import LoginModal from './modals/LoginModal/LoginModal';
 import RegisterModal from './modals/RegisterModal/RegisterModal';
+import CloseModalButton from './modals/CloseModalButton';
+import CraftModal from './modals/CraftModal/CraftModal';
+import LoadingModal from './modals/LoadingModal/LoadingModal';
 
 interface ModalProps {
 	modal?: string;
+	onClose?(): void;
 }
 
 interface Modals {
 	login: () => React.JSX.Element;
 	signup: () => React.JSX.Element;
+	craft: () => React.JSX.Element;
+	loading: () => React.JSX.Element;
 }
 
-const Modal = ({ modal }: ModalProps) => {
+const Modal = ({ modal, onClose }: ModalProps) => {
 	const modals: Modals = {
 		login: LoginModal,
 		signup: RegisterModal,
+		craft: CraftModal,
+		loading: LoadingModal,
 	};
 
 	const isOpened = modal && modals.hasOwnProperty(modal) && modal !== 'false';
@@ -28,11 +34,7 @@ const Modal = ({ modal }: ModalProps) => {
 						id='backdrop'
 						className='fixed inset-0 w-screen h-screen filter bg-zinc-800 opacity-70'></div>
 					<div className='relative z-10 bg-white p-8 rounded-lg shadow-md w-[70vw] max-w-[400px]'>
-						<Link
-							href={'?modal=false'}
-							scroll={false}>
-							<XIcon className='absolute top-2 right-2 w-6' />
-						</Link>
+						<CloseModalButton onClose={onClose} />
 						{isOpened && modals[modal as keyof Modals]()}
 					</div>
 				</div>

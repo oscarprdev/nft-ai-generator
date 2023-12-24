@@ -5,22 +5,25 @@ import { UploadImageInput } from '@/app/api/craft/upload/types';
 import { Bucket } from '@/cloudflare/bucket';
 import { APP_API_URL, PUBLIC_R2_URL, S3_ACCESS_KEY_ID, S3_API_URL, S3_SECRET_ACCESS_KEY } from '@/constants';
 import fs from 'fs/promises';
-import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-export const uploadImageAction = async (imageName: string) => {
-	const pathName = `./public/${imageName}`;
-	const file = await fs.readFile(pathName);
+interface UploadImageActionInput {
+	file: string;
+	title: string;
+	prompt: string;
+	keywords: string;
+}
 
-	const url = `${PUBLIC_R2_URL}/${imageName}`;
-	const title = cookies().get('title')?.value;
-	const prompt = cookies().get('prompt')?.value;
-	const keywords = cookies().get('keywords')?.value;
+export const uploadImageAction = async ({ file, title, prompt, keywords }: UploadImageActionInput) => {
+	const pathName = `./public/${file}`;
+	const readedFile = await fs.readFile(pathName);
+
+	const url = `${PUBLIC_R2_URL}/${file}`;
 
 	try {
 		if (url && title && prompt && keywords) {
 			const bucket = new Bucket('image-store', S3_API_URL, S3_ACCESS_KEY_ID, S3_SECRET_ACCESS_KEY);
-			await bucket.uploadFile(file, imageName, 'image/png');
+			await bucket.uploadFile(readedFile, file, 'image/png');
 
 			await fs.unlink(pathName);
 
@@ -42,8 +45,8 @@ export const uploadImageAction = async (imageName: string) => {
 		}
 	} catch (error: any) {
 		console.log(error);
-		redirect(`/craft?file=${file}&error='Error uploading file'`);
+		redirect(`/craft?error=Error uploading file`);
 	}
 
-	redirect(`/craft?success='Art successfully uploaded'`);
+	redirect(`/craft?success=Art successfully uploaded`);
 };

@@ -1,10 +1,10 @@
 'use server';
 
 import { clearCookiesAction } from '@/app/actions/clear-cookies.action';
-import { revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
 
 export const clearFormAction = () => {
 	clearCookiesAction();
 
-	revalidatePath('/craft');
+	redirect('/craft');
 };
