@@ -1,9 +1,10 @@
 export interface KeywordAction {
 	type: KeywordActionType;
-	value: string;
+	value: string[];
 }
 
 export enum KeywordActionType {
 	add = 'add',
 	remove = 'remove',
+	reset = 'reset',
 }

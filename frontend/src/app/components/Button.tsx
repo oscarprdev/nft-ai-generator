@@ -7,12 +7,14 @@ interface ButtonProps {
 	tertiary?: boolean;
 	disabled?: boolean;
 	pending?: boolean;
+	type: 'submit' | 'reset' | 'button';
 	onClick?: () => void;
 }
 
-const Button = ({ content, primary, secondary, tertiary, disabled, pending, onClick }: ButtonProps) => {
+const Button = ({ content, primary, secondary, tertiary, disabled, pending, type, onClick }: ButtonProps) => {
 	return (
 		<button
+			type={type}
 			disabled={disabled}
 			className={`z-10 w-full py-2 px-5 rounded-full border-2 ${
 				primary &&

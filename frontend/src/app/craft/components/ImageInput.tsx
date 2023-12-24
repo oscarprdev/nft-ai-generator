@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormStatus } from 'react-dom';
-import LoadIcon from './icons/LoadIcon';
+import LoadIcon from '../../components/icons/LoadIcon';
 
 const ImageInput = () => {
 	const { pending } = useFormStatus();

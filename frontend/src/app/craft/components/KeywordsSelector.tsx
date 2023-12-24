@@ -1,15 +1,16 @@
 'use client';
 
-import { useReducer } from 'react';
-import KeywordItem from './keywordItem';
+import { useEffect, useReducer } from 'react';
 import { keywordReducer } from '../reducers/keyword.reducer';
 import { KeywordActionType } from '../reducers/keyword.reducer.types';
+import KeywordItem from './KeywordItem';
 
 interface KeywordsSelectorProps {
 	keywords: string[];
+	reset: boolean;
 }
 
-const KeywordsSelector = ({ keywords }: KeywordsSelectorProps) => {
+const KeywordsSelector = ({ keywords, reset }: KeywordsSelectorProps) => {
 	const [state, dispatch] = useReducer(keywordReducer, []);
 
 	const isValueStored = (keyword: string) => {
@@ -18,9 +19,13 @@ const KeywordsSelector = ({ keywords }: KeywordsSelectorProps) => {
 
 	const handleKeywordClick = (keyword: string) => {
 		isValueStored(keyword)
-			? dispatch({ type: KeywordActionType.remove, value: keyword })
-			: dispatch({ type: KeywordActionType.add, value: keyword });
+			? dispatch({ type: KeywordActionType.remove, value: [keyword] })
+			: dispatch({ type: KeywordActionType.add, value: [keyword] });
 	};
+
+	useEffect(() => {
+		reset && dispatch({ type: KeywordActionType.reset, value: [] });
+	}, [reset]);
 
 	return (
 		<div className='flex flex-wrap gap-1 items-center justify-center min-w-[300px]'>
@@ -36,6 +41,7 @@ const KeywordsSelector = ({ keywords }: KeywordsSelectorProps) => {
 				name='keywords'
 				className='hidden'
 				value={state.join(', ')}
+				readOnly
 			/>
 		</div>
 	);

@@ -37,8 +37,6 @@ export const generateImageAction = async (formData: FormData) => {
 
 		revalidatePath('/craft');
 	} catch (error: any) {
-		redirect(`?error=${error.message}`);
+		redirect(`?error='Error generating AI art'`);
 	}
-
-	// redirect(`?file=${outputFileName}`);
 };

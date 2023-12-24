@@ -13,9 +13,10 @@ const FormButton = ({ content, disabled }: FormButtonProps) => {
 
 	return (
 		<Button
+			type='submit'
 			secondary
 			content={content}
-			disabled={disabled}
+			disabled={pending}
 			pending={pending}
 		/>
 	);

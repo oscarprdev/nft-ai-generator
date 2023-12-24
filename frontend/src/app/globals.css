@@ -31,8 +31,8 @@
 	:root {
 		--foreground-rgb: 255, 255, 255;
 		--background-rgb: 0, 0, 0;
-		--contrast: #18efa2;
-		--contrast-light: #6efcca;
+		--contrast: #0bd48d;
+		--contrast-light: #17c085;
 		--contrast-max-light: #bfffe9;
 
 		--card-gray: #59595e;

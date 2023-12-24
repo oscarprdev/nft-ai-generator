@@ -1,5 +1,6 @@
 'use client';
 
+import Button from '@/app/components/Button';
 import { uploadImageActions } from '../actions/upload-image.actions';
 
 interface UploadImageBtnProps {
@@ -12,11 +13,12 @@ const UploadImageBtn = ({ file }: UploadImageBtnProps) => {
 	};
 
 	return (
-		<button
+		<Button
+			secondary
+			content='Upload art'
 			onClick={handleFormAction}
-			className='py-2 px-8 rounded-full bg-zinc-100 text-zinc-600'>
-			Upload
-		</button>
+			type='button'
+		/>
 	);
 };
 
