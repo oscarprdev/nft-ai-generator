@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 interface ImageProps {
 	className: string;
 	src: string;
@@ -12,7 +10,7 @@ interface ImageProps {
 const ImageItem = ({ className, src, alt, rounded, cover, prompt }: ImageProps) => {
 	return (
 		<figure className={`${className} ${rounded && 'rounded-xl'} relative h-full w-full overflow-hidden`}>
-			<Image
+			<img
 				src={src}
 				alt={alt}
 				className={`w-full h-full ${cover && 'object-cover'}`}

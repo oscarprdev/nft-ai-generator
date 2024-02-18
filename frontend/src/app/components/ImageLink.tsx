@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface ImageLinkProps {
@@ -12,7 +11,7 @@ const ImageLink = ({ id, url, prompt }: ImageLinkProps) => {
 		<Link
 			href={`/gallery/${id}`}
 			className='cursor-pointer rounded-xl relative h-full w-full overflow-hidden'>
-			<Image
+			<img
 				src={url}
 				alt='gallery image'
 				className='w-full h-full object-cover'

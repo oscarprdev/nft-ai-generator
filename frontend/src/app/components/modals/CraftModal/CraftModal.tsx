@@ -1,7 +1,6 @@
 'use server';
 
 import { cookies } from 'next/headers';
-import Image from 'next/image';
 import { strToCapital } from '@/app/utils/strToCapital';
 import CraftModalAction from './CraftModalAction';
 
@@ -14,13 +13,12 @@ const CraftModal = () => {
 	return (
 		<article className='flex flex-col items-center gap-5 w-full'>
 			<p className='mt-[-1rem]'>Review your generated AI</p>
-			<Image
+			<img
 				src={`/${file}`}
 				alt='image generated'
 				width={230}
 				height={230}
 				className='rounded-lg shadow-md'
-				priority
 			/>
 			<div className='relative w-full pl-3'>
 				<p className='text-zinc-500 font-light text-sm'>Title</p>
