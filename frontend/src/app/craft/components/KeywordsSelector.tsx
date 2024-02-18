@@ -4,7 +4,7 @@ import { useEffect, useReducer } from 'react';
 import { keywordReducer } from '../reducers/keyword.reducer';
 import { KeywordActionType } from '../reducers/keyword.reducer.types';
 
-import KeywordItem from './KeywordItem';
+// import KeywordItem from './KeywordItem';
 
 interface KeywordsSelectorProps {
 	keywords: string[];
@@ -30,14 +30,14 @@ const KeywordsSelector = ({ keywords, reset }: KeywordsSelectorProps) => {
 
 	return (
 		<div className='flex flex-wrap gap-1 items-center justify-center min-w-[300px]'>
-			{keywords.slice(1, keywords.length).map((keyword) => (
+			{/* {keywords.slice(1, keywords.length).map((keyword) => (
 				<KeywordItem
 					key={crypto.randomUUID().toString()}
 					handleKeywordClick={handleKeywordClick}
 					keyword={keyword}
 					isValueStored={isValueStored(keyword)}
 				/>
-			))}
+			))} */}
 			<input
 				name='keywords'
 				className='hidden'
