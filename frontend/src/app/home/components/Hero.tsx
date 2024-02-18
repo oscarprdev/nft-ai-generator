@@ -1,4 +1,4 @@
-import { APP_API_URL } from '@/constants';
+import { APP_API_URL, PUBLIC_R2_URL } from '@/constants';
 import ImageItem from '../../components/ImageItem';
 
 const Hero = async () => {
@@ -32,7 +32,7 @@ const Hero = async () => {
 					<ImageItem
 						key={crypto.randomUUID().toString()}
 						className={`hero-image-${i + 1} opacity-0 shadow-md slide-up-animation ${cardDelay(i + 1)}`}
-						src={img}
+						src={`${PUBLIC_R2_URL}/${img}`}
 						alt='hero image'
 						rounded
 						cover
