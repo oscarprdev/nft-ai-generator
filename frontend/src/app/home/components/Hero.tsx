@@ -32,7 +32,7 @@ const Hero = async () => {
 					<ImageItem
 						key={crypto.randomUUID().toString()}
 						className={`hero-image-${i + 1} opacity-0 shadow-md slide-up-animation ${cardDelay(i + 1)}`}
-						src={`${PUBLIC_R2_URL}/${img}`}
+						src={`${PUBLIC_R2_URL}${img}`}
 						alt='hero image'
 						rounded
 						cover
