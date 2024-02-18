@@ -7,7 +7,7 @@ interface ButtonProps {
 	tertiary?: boolean;
 	disabled?: boolean;
 	pending?: boolean;
-	type: 'submit' | 'reset' | 'button';
+	type?: 'submit' | 'reset' | 'button';
 	onClick?: () => void;
 }
 

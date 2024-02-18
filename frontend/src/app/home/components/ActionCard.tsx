@@ -8,6 +8,7 @@ const ActionCard = () => {
 				<Button
 					secondary
 					content='Start free plan'
+					type='button'
 				/>
 			</div>
 		</article>

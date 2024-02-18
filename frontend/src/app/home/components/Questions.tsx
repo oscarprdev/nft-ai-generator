@@ -19,7 +19,7 @@ const Questions = async () => {
 				{questionsInfo.questions.map((info) => (
 					<details
 						key={crypto.randomUUID().toString()}
-						name='questions'
+						// name='questions'
 						className='small-intersection-animation cursor-pointer group w-full'>
 						<summary className='flex items-center justify-between text-zinc-100 rounded-xl shadow-md list-none border p-3 bg-gradient-to-tl from-[var(--card-gray)] to-[var(--card-gray-light)] group-hover:from-[var(--contrast)] group-hover:to-[var(--contrast-light)] group-open:from-[var(--contrast)] group-open:to-[var(--contrast-light)] group-open:border-[var(--contrast-light)]'>
 							{info.question}
