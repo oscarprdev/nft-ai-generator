@@ -3,6 +3,7 @@
 import { useEffect, useReducer } from 'react';
 import { keywordReducer } from '../reducers/keyword.reducer';
 import { KeywordActionType } from '../reducers/keyword.reducer.types';
+
 import KeywordItem from './KeywordItem';
 
 interface KeywordsSelectorProps {
